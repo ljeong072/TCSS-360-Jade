@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23d572b1-28b3-4fcb-aa58-60b3762328f6" name="Changes" comment="Sprint 0 Lucas' commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="23d572b1-28b3-4fcb-aa58-60b3762328f6" name="Changes" comment="Sprint 0 MEETING 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
-    <list id="6f038dd5-722a-42a4-8467-ad7ff5bf6e33" name="Changes by Aqiu" comment="" />
-    <list id="9b43e773-e74f-4252-bd5a-a79a3d8f331e" name="Changes by rbh2o" comment="" />
-    <list id="6d9466e7-1128-410e-94e8-b38dc40d98bd" name="Changes by Tyler" comment="">
+    <list id="6f038dd5-722a-42a4-8467-ad7ff5bf6e33" name="Changes by Aqiu" comment="">
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,9 +27,8 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/src/Main.java">
       <ranges>
-        <range start1="0" end1="0" start2="0" end2="5" changelist="23d572b1-28b3-4fcb-aa58-60b3762328f6" />
-        <range start1="2" end1="3" start2="7" end2="15" changelist="23d572b1-28b3-4fcb-aa58-60b3762328f6" />
-        <range start1="4" end1="4" start2="16" end2="29" changelist="6d9466e7-1128-410e-94e8-b38dc40d98bd" />
+        <range start1="4" end1="4" start2="4" end2="7" changelist="6f038dd5-722a-42a4-8467-ad7ff5bf6e33" />
+        <range start1="14" end1="14" start2="17" end2="32" changelist="23d572b1-28b3-4fcb-aa58-60b3762328f6" />
       </ranges>
     </file>
   </component>
@@ -101,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712109874577</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Sprint 0 MEETING 1">
+      <option name="closed" value="true" />
+      <created>1712198477904</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712198477904</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +125,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="Sprint 0 Lucas' commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sprint 0 Lucas' commit" />
+    <MESSAGE value="Sprint 0 MEETING 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sprint 0 MEETING 1" />
   </component>
 </project>
