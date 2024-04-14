@@ -68,6 +68,7 @@
       <updated>1712108057607</updated>
       <workItem from="1712108058851" duration="755000" />
       <workItem from="1712804513873" duration="257000" />
+      <workItem from="1713116614338" duration="62000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -101,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712804668495</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Sprint 0 MEETING 3&#10;&#10;Finished the code for sprint 0">
+      <option name="closed" value="true" />
+      <created>1713116651853</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713116651853</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
