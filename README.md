@@ -12,3 +12,7 @@ Weekly Meeting 3: https://docs.google.com/document/d/1FHGVQ3DCtCeJF_AqQNr6NI3eft
 ## Iteration 1
 
 Weekly Meeting 4: https://docs.google.com/document/d/1d2qGIUE24EBBj3hB0tyrdtKl40T5zA3aDLNXvGuczb8/edit
+
+## Iteration 2 
+
+Weekly Meeting 5: https://docs.google.com/document/d/1UiGXfRU5fSIrlvC9T-kjRhfKDeUxR5SPWbP03kvMHNI/edit
