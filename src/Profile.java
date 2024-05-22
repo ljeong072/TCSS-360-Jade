@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+
     /**
      * This class implements profile functionalities by able to implement import/export on User data/settings.
      *
@@ -148,3 +149,6 @@ import java.util.*;
             return "User: " + myUserName + "\nEmail: " + myEmail;
         }
     }
+    message.txt
+5 KB
+}
