@@ -11,4 +11,3 @@ public class Project {
             return name;
         }
     }
-}
