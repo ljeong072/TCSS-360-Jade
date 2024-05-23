@@ -20,3 +20,5 @@ Weekly Meeting 5: https://docs.google.com/document/d/1UiGXfRU5fSIrlvC9T-kjRhfKDe
 Weekly Meeting 6: https://docs.google.com/document/d/1OCl6jEAhwbCe7FYq106hEw3LvE9a3HnugumymanaJ3g/edit
 
 Check in 3 (Design Document): https://docs.google.com/document/d/1YAeJ0cbQ9UCRIBz8Gzl-63jkP0nxyp9dVUYH-OnGWBw/edit
+
+Weekly Meeting 7: https://docs.google.com/document/d/12j9LKspLHoSWxCaoiZPoqrHwurrhsOMPlmnvqNzuuac/edit
