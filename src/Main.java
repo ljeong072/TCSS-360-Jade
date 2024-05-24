@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
-import java.util.Properties;
 import java.util.Map;
 
 /**
@@ -13,6 +12,7 @@ import java.util.Map;
 public class Main {
     private static final String VERSION = "1.2";
     private static Profile currentProfile;
+    private static JPanel currentPanel;
     private static JFrame frame;
     private static JMenuBar menuBar;
 
@@ -29,9 +29,9 @@ public class Main {
         aboutMenu.add(aboutItem);
 
         aboutItem.addActionListener(theEvent ->
-                JOptionPane.showMessageDialog(null, """
+            JOptionPane.showMessageDialog(null, """
                         This app is registered to: """ + " " + (currentProfile != null ? currentProfile.getUserName() : "No profile selected") +
-                        "\n" + """
+                "\n" + """
                         This app provided by: TeamOfFive \n
                         Members:
                         Tyler Cairney
@@ -80,7 +80,7 @@ public class Main {
             panel.add(pin);
 
             int result = JOptionPane.showConfirmDialog(null, panel, "Create Profile",
-                    JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 
             if (result == JOptionPane.OK_OPTION) {
                 if (!username.getText().isEmpty() && !email.getText().isEmpty()) {
@@ -91,9 +91,10 @@ public class Main {
                     currentProfile = profile;  // Update the current profile
                     System.out.println("Profiles: " + Profile.getProfiles());
                     updateMenuBar(); // Show the projects menu
+                    updateProfileScreen();
                 } else {
                     JOptionPane.showMessageDialog(null, "Username and Email cannot be empty.",
-                            "Error", JOptionPane.ERROR_MESSAGE);
+                        "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
@@ -102,14 +103,14 @@ public class Main {
             Map<String, Profile> profiles = Profile.getProfiles();
             if (profiles.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "No profiles available.\n" +
-                                "\nPlease create a new profile or import existing profiles.",
-                        "Info", JOptionPane.INFORMATION_MESSAGE);
+                        "\nPlease create a new profile or import existing profiles.",
+                    "Info", JOptionPane.INFORMATION_MESSAGE);
                 return;
             }
 
             String[] profileNames = profiles.keySet().toArray(new String[0]);
             String selectedProfile = (String) JOptionPane.showInputDialog(null, "Select a profile",
-                    "Profiles", JOptionPane.PLAIN_MESSAGE, null, profileNames, profileNames[0]);
+                "Profiles", JOptionPane.PLAIN_MESSAGE, null, profileNames, profileNames[0]);
 
             if (selectedProfile != null) {
                 Profile profile = profiles.get(selectedProfile);
@@ -118,19 +119,21 @@ public class Main {
                     if (profile.checkPin(pin)) {
                         currentProfile = profile;
                         JOptionPane.showMessageDialog(null, "Profile changed to: "
-                                        + currentProfile.getUserName(),
-                                "Info", JOptionPane.INFORMATION_MESSAGE);
+                                + currentProfile.getUserName(),
+                            "Info", JOptionPane.INFORMATION_MESSAGE);
                         updateMenuBar();
+                        updateProfileScreen();
                     } else {
                         JOptionPane.showMessageDialog(null, "Incorrect PIN.",
-                                "Error", JOptionPane.ERROR_MESSAGE);
+                            "Error", JOptionPane.ERROR_MESSAGE);
                     }
                 } else {
                     currentProfile = profile;
                     JOptionPane.showMessageDialog(null, "Profile changed to: "
-                                    + currentProfile.getUserName(),
-                            "Info", JOptionPane.INFORMATION_MESSAGE);
+                            + currentProfile.getUserName(),
+                        "Info", JOptionPane.INFORMATION_MESSAGE);
                     updateMenuBar();
+                    updateProfileScreen();
                 }
             }
         });
@@ -139,18 +142,18 @@ public class Main {
             Map<String, Profile> profiles = Profile.getProfiles();
             if (profiles.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "No profiles available to delete.",
-                        "Info", JOptionPane.INFORMATION_MESSAGE);
+                    "Info", JOptionPane.INFORMATION_MESSAGE);
                 return;
             }
 
             String[] profileNames = profiles.keySet().toArray(new String[0]);
             String selectedProfile = (String) JOptionPane.showInputDialog(null, "Select a profile to delete",
-                    "Delete Profile", JOptionPane.PLAIN_MESSAGE, null, profileNames, profileNames[0]);
+                "Delete Profile", JOptionPane.PLAIN_MESSAGE, null, profileNames, profileNames[0]);
 
             if (selectedProfile != null) {
                 int confirm = JOptionPane.showConfirmDialog(null,
-                        "Are you sure you want to delete the profile: " + selectedProfile + "?",
-                        "Confirm Delete", JOptionPane.YES_NO_OPTION);
+                    "Are you sure you want to delete the profile: " + selectedProfile + "?",
+                    "Confirm Delete", JOptionPane.YES_NO_OPTION);
                 if (confirm == JOptionPane.YES_OPTION) {
                     Profile.deleteProfile(selectedProfile);
                     JOptionPane.showMessageDialog(null, "Profile deleted.");
@@ -175,7 +178,7 @@ public class Main {
                 } catch (Exception e) {
                     e.printStackTrace();
                     JOptionPane.showMessageDialog(null, "Failed to import profiles.",
-                            "Error", JOptionPane.ERROR_MESSAGE);
+                        "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
@@ -191,7 +194,7 @@ public class Main {
                 } catch (Exception e) {
                     e.printStackTrace();
                     JOptionPane.showMessageDialog(null, "Failed to export profiles.",
-                            "Error", JOptionPane.ERROR_MESSAGE);
+                        "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
@@ -248,8 +251,9 @@ public class Main {
         welcomeLabel.setForeground(Color.ORANGE);
         welcomeLabel.setFont(new Font("Arial", Font.BOLD, 36));
         mainPanel.add(welcomeLabel, BorderLayout.CENTER);
-
+        currentPanel = mainPanel;
         frame.add(mainPanel, BorderLayout.CENTER);
+
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
@@ -264,4 +268,12 @@ public class Main {
         menuBar.revalidate();
         menuBar.repaint();
     }
+
+    private static void updateProfileScreen() {
+        frame.remove(currentPanel);
+        ProfileGUI profilePanel = new ProfileGUI(currentProfile);
+        currentPanel = profilePanel;
+        frame.add(profilePanel, BorderLayout.CENTER);
+    }
+
 }
