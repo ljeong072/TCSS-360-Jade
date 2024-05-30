@@ -24,3 +24,5 @@ Check in 3 (Design Document): https://docs.google.com/document/d/1YAeJ0cbQ9UCRIB
 Weekly Meeting 7: https://docs.google.com/document/d/12j9LKspLHoSWxCaoiZPoqrHwurrhsOMPlmnvqNzuuac/edit
 
 Peer Review Code: https://docs.google.com/document/d/12VVaspWgsivEcqYxC5YyrShU-LkHalzPoV1Vxk2QRH0/edit
+
+Weekly Meeting 8: https://docs.google.com/document/d/1dNq5Jul_0udWgaw7tHWsAAR6bZWBJkSvHvqszHloiIE/edit
